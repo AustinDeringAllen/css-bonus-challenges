@@ -1,0 +1,218 @@
+:root {
+    --red: #F44236;
+    --light-grey: #F1F1F1;
+    --dark-grey: #666666;
+
+    --font-primary: 'Lato', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header {
+    background-color: var(--red);
+    color: white;
+    font-family: var(--font-heading);
+}
+
+nav {
+    box-shadow: 0 0 5px 0 black ;
+    display: flex;
+    align-items: center;
+    height: 3em;
+}
+
+nav .hamburger {
+    display: none;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+}
+
+nav .hamburger div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    height: 100%;
+    padding: 1em;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.active {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.jumbotron {
+    text-align: center;
+    padding: 6em;
+}
+
+.jumbotron h1 {
+    font-size: 3em;
+    margin-bottom: .5em;
+    text-transform: uppercase;
+}
+
+.jumbotron button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1em;
+    margin-top: 2em;
+}
+
+main {
+    font-family: var(--font-primary);
+}
+
+.text {
+    width: 50%;
+}
+
+.text > * {
+    margin: 1em 0;
+}
+
+.little-text {
+    color: #757575;
+    font-size: 0.75em;
+
+}
+
+.icon {
+    color: var(--red);
+    font-size: 10em;
+    margin: 0.5em auto;
+}
+
+.one {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5em 15em;
+}
+
+
+.two {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 5em 15em;
+    background-color: var(--light-grey);
+}
+
+.quote {
+    color: white;
+    background-color: var(--dark-grey);
+    padding: 3em;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 5em 0;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-grey);
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0.25em;
+}
+
+footer ul li a {
+    color: var(--dark-grey);
+}
+
+footer > p {
+    margin-top: 2em;
+}
+
+footer span {
+    font-size: .8em;
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: none;
+    }
+
+    nav ul li:nth-child(1) {
+        display: inline-block;
+    }
+
+    nav .hamburger {
+        display: block;
+    }
+
+    .jumbotron {
+        padding: 6em 3em;
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    .text > * {
+        margin-bottom: 2em;
+    }
+
+    .one,.two {
+        padding: 5em 1em;
+    }
+
+    .one {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .two {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+}
+/*
+## Specs
+
+- title font-family: "Montserrat", sans-serif;
+- primary font-family: Lato, sans-serif;
+- mobile-breakpoint: 600px and below
+- main content width: about 1000px
+- fluid navbar
+*/
